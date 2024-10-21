@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/views/home_page/home_view.dart';
+import 'package:the_basics/views/home/home_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: Colors.deepPurple,
-        textTheme: GoogleFonts.afacadTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.jostTextTheme(Theme.of(context).textTheme),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

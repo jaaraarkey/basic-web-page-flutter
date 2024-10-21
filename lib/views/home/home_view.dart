@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/views/home_page/partials/nav_bar.dart';
-import 'package:the_basics/widgets/call_for_action.dart';
-import 'package:the_basics/widgets/centered_view.dart';
-import 'package:the_basics/widgets/details.dart';
+import 'package:the_basics/widgets/call_for_action/call_for_action.dart';
+import 'package:the_basics/widgets/centered_view/centered_view.dart';
+import 'package:the_basics/widgets/content_details/details.dart';
+import 'package:the_basics/widgets/navbar/nav_bar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
