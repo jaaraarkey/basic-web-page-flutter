@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/constants/constants.dart';
 
-class CallToAction extends StatelessWidget {
+class CallToActionMobile extends StatelessWidget {
+  const CallToActionMobile(this.title, {super.key});
+
   final String title;
-  const CallToAction(this.title);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+      height: 60,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5), color: primaryColor),
       child: Text(
         title,
         style: TextStyle(
@@ -16,9 +21,6 @@ class CallToAction extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      decoration: BoxDecoration(
-          color: Color.fromARGB(255, 31, 229, 146),
-          borderRadius: BorderRadius.circular(5)),
     );
   }
 }
