@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_basics/constants/constants.dart';
 
 class Details extends StatelessWidget {
   const Details({super.key});
@@ -26,9 +27,11 @@ class Details extends StatelessWidget {
             Text(
               'I LOVE BUILDING\nFLUTTER APPS.',
               style: TextStyle(
-                fontFamily: 'Poppins',
-                letterSpacing: 1.5,
+                fontFamily: 'Roboto',
+                // todo  Constants file ->
+                letterSpacing: letterSpacing,
                 fontWeight: FontWeight.w900,
+                // fontStyle: FontStyle.italic,
                 fontSize: titleSize,
                 height: 0.9,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/constants/constants.dart';
 
 class CallToActionTabletDesktop extends StatelessWidget {
   const CallToActionTabletDesktop(this.title, {super.key});
@@ -7,19 +8,21 @@ class CallToActionTabletDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final buttonColor = primaryColor;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 2, 245, 221),
+        color: buttonColor,
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
         title,
         style: TextStyle(
-          letterSpacing: 1.5,
+          // todo  Constants file ->
+          letterSpacing: letterSpacing,
           fontSize: 18,
           fontWeight: FontWeight.w800,
-          color: Colors.black,
+          color: Colors.white,
         ),
       ),
     );
