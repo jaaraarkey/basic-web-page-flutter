@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/widgets/call_for_action/call_for_action.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_basics/widgets/centered_view/centered_view.dart';
-import 'package:the_basics/widgets/content_details/details.dart';
+import 'package:the_basics/widgets/content_details/home_content_mobile.dart';
 import 'package:the_basics/widgets/navbar/nav_bar.dart';
+import '../../widgets/content_details/home_content_desktop.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -16,12 +17,11 @@ class HomeView extends StatelessWidget {
             children: <Widget>[
               NavBar(),
               Expanded(
-                child: Row(
-                  children: [
-                    Details(),
-                    Expanded(child: Center(child: CallToAction("contact me"))),
-                  ],
-                ),
+                child: Expanded(
+                    child: ScreenTypeLayout.builder(
+                  mobile: (BuildContext context) => HomeContentMobile(),
+                  tablet: (BuildContext context) => HomeContentDesktop(),
+                )),
               )
             ],
           ),

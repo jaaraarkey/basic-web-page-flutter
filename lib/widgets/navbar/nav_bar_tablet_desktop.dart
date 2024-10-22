@@ -7,26 +7,23 @@ class NavigationBarTabletDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: SizedBox(
-            child: NavBarLogo(),
-            // todo add logo image to assets/images/logo.png
-            // Image.asset('assets/images/logo.png'),
-          ),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.min,
+    return Container(
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            NavBarItem('Home'),
-            SizedBox(width: 60),
-            NavBarItem('About'),
+            NavBarLogo(),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                NavBarItem('Portfolio'),
+                SizedBox(
+                  width: 60,
+                ),
+                NavBarItem('About'),
+              ],
+            )
           ],
-        )
-      ],
-    );
+        ));
   }
 }
