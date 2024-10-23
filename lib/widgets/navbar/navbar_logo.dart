@@ -11,8 +11,8 @@ class NavBarLogo extends StatelessWidget {
     return GestureDetector(
       onTap: () => locator<NavigationService>().navigateTo(HomeRoute),
       child: Text(
-        "FLUTTER_\n JAAR",
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        "FLUTTER\nMAN.",
+        style: TextStyle(height: .9, fontSize: 20, fontWeight: FontWeight.bold),
         // todo: add logo
         // Image.asset('assets/logo.png'
         // ),
