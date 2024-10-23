@@ -11,6 +11,7 @@
 .svn/
 .swiftpm/
 .lib/firebase_options.dart
+*.env
 
 # IntelliJ related
 *.iml
