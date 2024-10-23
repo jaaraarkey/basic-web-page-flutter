@@ -21,13 +21,25 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,46 +53,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDvKzbY962RSbei8U_chc1SV0nmXIvdG7E',
-    appId: '1:428408602290:web:b2db40ff2aaa307e1ad3ab',
-    messagingSenderId: '428408602290',
-    projectId: 'mybasicwebsite-91259',
-    authDomain: 'mybasicwebsite-91259.firebaseapp.com',
-    storageBucket: 'mybasicwebsite-91259.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBdwQcnu1ILIJWsfMtkN4aqEk98ynuEH1o',
-    appId: '1:428408602290:android:efe7e50ca26d47ee1ad3ab',
-    messagingSenderId: '428408602290',
-    projectId: 'mybasicwebsite-91259',
-    storageBucket: 'mybasicwebsite-91259.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA38FpAu7tDPlzvdeOemKj3Dddv0AWEB-c',
-    appId: '1:428408602290:ios:98dc6a26b39ac2001ad3ab',
-    messagingSenderId: '428408602290',
-    projectId: 'mybasicwebsite-91259',
-    storageBucket: 'mybasicwebsite-91259.appspot.com',
-    iosBundleId: 'com.example.theBasics',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA38FpAu7tDPlzvdeOemKj3Dddv0AWEB-c',
-    appId: '1:428408602290:ios:98dc6a26b39ac2001ad3ab',
-    messagingSenderId: '428408602290',
-    projectId: 'mybasicwebsite-91259',
-    storageBucket: 'mybasicwebsite-91259.appspot.com',
-    iosBundleId: 'com.example.theBasics',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDvKzbY962RSbei8U_chc1SV0nmXIvdG7E',
-    appId: '1:428408602290:web:3542fc66ba271bc51ad3ab',
-    messagingSenderId: '428408602290',
-    projectId: 'mybasicwebsite-91259',
-    authDomain: 'mybasicwebsite-91259.firebaseapp.com',
-    storageBucket: 'mybasicwebsite-91259.appspot.com',
+    apiKey: 'FIREBASE_API_KEY',
+    appId: '1:119555847598:web:f252280957c6f57c33443f',
+    messagingSenderId: '119555847598',
+    projectId: 'basicwebsite-50839',
+    authDomain: 'basicwebsite-50839.firebaseapp.com',
+    storageBucket: 'basicwebsite-50839.appspot.com',
   );
 }

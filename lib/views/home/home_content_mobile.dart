@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_basics/constants/constants.dart';
 import 'package:the_basics/widgets/call_for_action/call_to_action.dart';
-import 'package:the_basics/widgets/content_details/details.dart';
+import 'package:the_basics/views/home/details.dart';
 
 class HomeContentMobile extends StatelessWidget {
   const HomeContentMobile({super.key});

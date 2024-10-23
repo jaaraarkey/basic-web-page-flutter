@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/views/home/home_view.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:the_basics/locator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:the_basics/views/layout_template/layout_template.dart';
 import 'firebase_options.dart';
 
 // ...
@@ -11,6 +13,8 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  SetupLocator();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: const LayoutTemplate(),
     );
   }
 }

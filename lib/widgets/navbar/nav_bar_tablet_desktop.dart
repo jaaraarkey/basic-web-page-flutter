@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/routing/route_names.dart';
 import 'package:the_basics/widgets/navbar/navbar_item.dart';
 import 'package:the_basics/widgets/navbar/navbar_logo.dart';
 
@@ -8,6 +9,8 @@ class NavigationBarTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        alignment: Alignment.topLeft,
+        // color: Colors.yellow,
         height: 100,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -15,12 +18,13 @@ class NavigationBarTabletDesktop extends StatelessWidget {
             NavBarLogo(),
             Row(
               mainAxisSize: MainAxisSize.min,
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                NavBarItem('Portfolio'),
+                NavBarItem('Portfolio', PortfolioRoute),
                 SizedBox(
                   width: 60,
                 ),
-                NavBarItem('About'),
+                NavBarItem('About', AboutRoute),
               ],
             )
           ],

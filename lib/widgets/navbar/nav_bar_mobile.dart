@@ -7,6 +7,8 @@ class NavigationBarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.topLeft,
+      // color: Colors.yellow,
       height: 80,
       child: Row(
         mainAxisSize: MainAxisSize.max,
