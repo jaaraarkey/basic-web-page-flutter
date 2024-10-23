@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/locator.dart';
+import 'package:the_basics/services/navigation_service.dart';
 import 'package:the_basics/widgets/navbar/navbar_item.dart';
 
 class DrawerItem extends StatelessWidget {
@@ -12,12 +14,17 @@ class DrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 24, top: 16),
-      child: Row(
-        children: <Widget>[
-          Icon(icon),
-          SizedBox(width: 16),
-          NavBarItem(title, navigationPath)
-        ],
+      child: GestureDetector(
+        onTap: () {
+          locator<NavigationService>().navigateTo(navigationPath);
+        },
+        child: Row(
+          children: <Widget>[
+            Icon(icon),
+            SizedBox(width: 16),
+            NavBarItem(title, navigationPath)
+          ],
+        ),
       ),
     );
   }
