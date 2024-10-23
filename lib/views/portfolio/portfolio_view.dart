@@ -5,8 +5,11 @@ class PortfolioView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Portfolio View'),
+    return Container(
+      color: Colors.green,
+      child: Center(
+          child: Text('Portfolio View',
+              style: TextStyle(fontSize: 30, color: Colors.blueGrey))),
     );
   }
 }

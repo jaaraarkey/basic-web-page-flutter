@@ -13,7 +13,7 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  SetupLocator();
+  setupLocator();
   await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }

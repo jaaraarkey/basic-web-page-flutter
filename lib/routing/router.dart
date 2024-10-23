@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_basics/routing/route_names.dart';
 import 'package:the_basics/views/about/about_view.dart';
+import 'package:the_basics/views/contact/contact_view.dart';
 import 'package:the_basics/views/portfolio/portfolio_view.dart';
 
 import '../views/home/home_view.dart';
@@ -14,6 +15,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(AboutView());
     case PortfolioRoute:
       return _getPageRoute(PortfolioView());
+    case ContactRoute:
+      return _getPageRoute(ContactView());
     default:
       return _getPageRoute(HomeView());
   }

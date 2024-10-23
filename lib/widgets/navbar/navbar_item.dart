@@ -10,7 +10,10 @@ class NavBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => locator<NavigationService>().navigateTo(routeName),
+      onTap: () {
+        Navigator.of(context).pop();
+        locator<NavigationService>().navigateTo(routeName);
+      },
       child: Text(
         title,
         style: TextStyle(fontSize: 18),
